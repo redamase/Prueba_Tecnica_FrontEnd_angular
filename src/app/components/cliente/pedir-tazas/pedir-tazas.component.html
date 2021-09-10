@@ -1,0 +1,45 @@
+<div class="container box">
+  <br />
+  <img src="./assets/img/taza.png" class="img-40" alt="Taza" />
+  <form [formGroup]="formTaza" (ngSubmit)="SendData()">
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Tipo de taza</mat-label>
+      <input matInput disabled [value]="listCups.tipo_taza" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Color de taza</mat-label>
+      <input matInput disabled [value]="listCups.color" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Dimensión de taza</mat-label>
+      <input matInput disabled [value]="listCups.dimensiones" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Capacidad de taza</mat-label>
+      <input matInput disabled [value]="listCups.capacidad" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Modelo de la taza</mat-label>
+      <input matInput disabled [value]="listCups.modelo" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa el material de la taza</mat-label>
+      <input matInput disabled [value]="listCups.material" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Precio</mat-label>
+      <input matInput disabled [value]="listCups.precio_venta" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa la cantidad de tazas a comprar</mat-label>
+      <input
+        matInput
+        formControlName="cantidad_comprar"
+        type="number"
+      /> </mat-form-field
+    ><br />
+    <button type="submit" mat-raised-button class="inputs_login" color="accent">
+      Ingresar
+    </button>
+  </form>
+</div>

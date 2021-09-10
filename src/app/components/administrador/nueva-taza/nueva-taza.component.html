@@ -1,0 +1,50 @@
+<div class="container">
+  <br />
+  <form *ngIf="!loading" [formGroup]="formTaza" (ngSubmit)="SendData()">
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Selecciona el tipo de taza</mat-label>
+      <mat-select formControlName="tipo_taza">
+        <mat-option
+          *ngFor="let listTypeCup of listTypeCups"
+          [value]="listTypeCup?.tipo_taza"
+          >{{ listTypeCup?.tipo_taza }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa el color de la taza</mat-label>
+      <input matInput formControlName="color_taza" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa la dimensión de la taza</mat-label>
+      <input matInput formControlName="dimension_taza" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa la capacidad de la taza</mat-label>
+      <input matInput formControlName="capacidad_taza" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa el modelo de la taza</mat-label>
+      <input matInput formControlName="modelo_taza" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa el material de la taza</mat-label>
+      <input matInput formControlName="material_taza" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa la cantidad disponible de tazas</mat-label>
+      <input matInput formControlName="cantidad_total" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa el precio de compra</mat-label>
+      <input matInput formControlName="precio_compra" type="string" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa el precio de venta</mat-label>
+      <input matInput formControlName="precio_venta" type="string" />
+    </mat-form-field>
+    <button type="submit" mat-raised-button class="inputs_login" color="accent">
+      Ingresar
+    </button>
+  </form>
+</div>

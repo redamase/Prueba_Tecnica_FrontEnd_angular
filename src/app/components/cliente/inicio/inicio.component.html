@@ -1,0 +1,30 @@
+<mat-card class="example-card" *ngFor="let listCup of listCups">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image">
+      <img src="./assets/img/coffee-cup.png" mat-card-avatar />
+    </div>
+    <mat-card-title>{{ listCup?.tipo_taza }}</mat-card-title>
+    <mat-card-subtitle>{{ listCup?.color }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="./assets/img/taza.png" alt="Foto de la taza" />
+  <mat-card-content>
+    <ul>
+      <li>{{ listCup?.tipo_taza }}</li>
+      <li>{{ listCup?.color }}</li>
+      <li>{{ listCup?.dimensiones }}</li>
+      <li>{{ listCup?.capacidad }}</li>
+      <li>{{ listCup?.modelo }}</li>
+      <li>{{ listCup?.material }}</li>
+      <li>$ {{ listCup?.precio_venta }}</li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      color="accent"
+      routerLink="/cliente/pedir-tazas/{{ listCup?.id }}"
+    >
+      Comprar
+    </button>
+  </mat-card-actions>
+</mat-card>

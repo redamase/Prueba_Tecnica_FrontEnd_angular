@@ -1,0 +1,14 @@
+.inputs_taza {
+  width: 60%;
+}
+.box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.img-40 {
+  width: 40%;
+}
+.container-60 {
+  width: 60%;
+}
