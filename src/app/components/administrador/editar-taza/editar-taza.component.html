@@ -1,0 +1,91 @@
+<div class="container">
+  <br />
+  <form *ngIf="!loading" [formGroup]="formTaza" (ngSubmit)="SendData()">
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Selecciona el tipo de taza</mat-label>
+      <mat-select formControlName="tipo_taza" [(value)]="tipo_taza">
+        <mat-option
+          *ngFor="let listTypeCup of listTypeCups"
+          [value]="listTypeCup?.tipo_taza"
+          >{{ listTypeCup?.tipo_taza }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa el color de la taza</mat-label>
+      <input matInput formControlName="color_taza" [value]="listCups.color" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa la dimensión de la taza</mat-label>
+      <input
+        matInput
+        formControlName="dimension_taza"
+        [value]="listCups.dimensiones"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa la capacidad de la taza</mat-label>
+      <input
+        matInput
+        formControlName="capacidad_taza"
+        [value]="listCups.capacidad"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa el modelo de la taza</mat-label>
+      <input matInput formControlName="modelo_taza" [value]="listCups.modelo" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa el material de la taza</mat-label>
+      <input
+        matInput
+        formControlName="material_taza"
+        [value]="listCups.material"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa la cantidad disponible de tazas</mat-label>
+      <input
+        matInput
+        formControlName="cantidad_total"
+        type="number"
+        [value]="listCups.cantidad_total"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa el precio de compra</mat-label>
+      <input
+        matInput
+        formControlName="precio_compra"
+        type="string"
+        [value]="listCups.precio_compra"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Ingresa el precio de venta</mat-label>
+      <input
+        matInput
+        formControlName="precio_venta"
+        type="string"
+        [value]="listCups.precio_venta"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>¿Eliminado?</mat-label>
+      <mat-select formControlName="eliminado" [(value)]="eliminado">
+        <mat-option [value]="true">Si</mat-option>
+        <mat-option [value]="false">No</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button
+      type="submit"
+      mat-raised-button
+      class="inputs_login"
+      color="accent"
+      type="submit"
+      [disabled]="formTaza.invalid"
+    >
+      Ingresar
+    </button>
+  </form>
+</div>

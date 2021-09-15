@@ -16,7 +16,7 @@ interface Transaction {
 })
 export class InicioComponent implements OnInit {
   ELEMENT_DATA!: Taza[];
-  displayedColumns: string[] = ['tipo_taza', 'color', 'dimension', 'capacidad','modelo','material','cantidad_total','cantidad_disponible', 'precio_compra', 'precio_venta', "precio_final_compra"];
+  displayedColumns: string[] = ['tipo_taza', 'color', 'dimension', 'capacidad','modelo','material','cantidad_total','cantidad_disponible', 'precio_compra', 'precio_venta', "precio_final_compra", "id"];
   dataSource = new MatTableDataSource<Taza>(this.ELEMENT_DATA);
   constructor(private ApiService:ApiServiceVer) { }
   ngOnInit(): void {

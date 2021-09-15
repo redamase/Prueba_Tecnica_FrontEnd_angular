@@ -15,8 +15,15 @@ export class ApiServiceTaza {
   public SaveCups(url:string, body: any ){
     return this.http.post(url, body);
   }
+  public UpdateCup(url:string, body: any ){
+    return this.http.put(url, body);
+  }
 
   public getOrders(url:string){
+    return this.http.get(url);
+  }
+
+  public getCup(url:string){
     return this.http.get(url);
   }
 }

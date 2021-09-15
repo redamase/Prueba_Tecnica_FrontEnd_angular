@@ -10,5 +10,6 @@ export interface Taza{
     cantidad_disponible: number,
     precio_compra: number ,
     precio_venta: number,
-    precio_final_compra: number 
+    precio_final_compra: number,
+    eliminado: boolean,
 }

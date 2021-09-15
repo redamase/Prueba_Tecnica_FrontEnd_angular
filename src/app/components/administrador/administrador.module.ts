@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { TazasComponent } from './tazas/tazas.component';
 import { NuevaTazaComponent } from './nueva-taza/nueva-taza.component';
+import { EditarTazaComponent } from './editar-taza/editar-taza.component';
 
 
 
@@ -20,6 +21,7 @@ import { NuevaTazaComponent } from './nueva-taza/nueva-taza.component';
     PedidosComponent,
     TazasComponent,
     NuevaTazaComponent,
+    EditarTazaComponent,
   ],
   imports: [
     CommonModule,
