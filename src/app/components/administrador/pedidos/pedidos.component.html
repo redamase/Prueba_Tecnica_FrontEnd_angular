@@ -1,5 +1,6 @@
 <div class="container">
   <h2>Pedidos Realizados</h2>
+  <p>Total de ventas: {{ totalCompras }}</p>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="tipo_taza">
       <th mat-header-cell *matHeaderCellDef>Tipo Taza</th>

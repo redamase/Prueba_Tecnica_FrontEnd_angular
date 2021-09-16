@@ -16,7 +16,6 @@ export class InicioComponent implements OnInit {
   public getDataCup(){
     this.ApiService.getCups(`http://localhost:8081/api/inventario/taza`).subscribe(respuesta =>{
       this.listCups = respuesta;
-      console.log(respuesta)
     });
   }
 }

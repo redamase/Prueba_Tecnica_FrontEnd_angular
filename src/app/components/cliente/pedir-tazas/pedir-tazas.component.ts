@@ -30,8 +30,10 @@ export class PedirTazasComponent implements OnInit {
     });
   }
   SendData(){
+
     this.ApiService.SaveOrder(`http://localhost:8081/api/inventario/pedidos`,{
-      taza_id: this.listCups.id,
+      id_taza: this.listCups.id,
+      // cantidad_disponible: this.listCups.cantidad_disponible,
       tipo_taza: this.listCups.tipo_taza,
       color: this.listCups.color,
       dimensiones:this.listCups.dimensiones,
@@ -40,10 +42,13 @@ export class PedirTazasComponent implements OnInit {
       material: this.listCups.material,
       cantidad_total: this.formTaza.value.cantidad_comprar,
       precio_total: (this.formTaza.value.cantidad_comprar*this.listCups.precio_venta),
-      usuario_id: 3
+      usuario_id: 2
     }).subscribe(respuesta =>{
-      alert("Pedido Guardado con éxito");
+     
+      alert("Se ha realizado el pedido con exito");
       window.location.href = "http://localhost:4200/cliente/pedidos";
+    }, err=>{
+      alert(err.error);
     });
     }
 

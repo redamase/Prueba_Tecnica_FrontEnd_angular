@@ -3,6 +3,10 @@
   <img src="./assets/img/taza.png" class="img-40" alt="Taza" />
   <form [formGroup]="formTaza" (ngSubmit)="SendData()">
     <mat-form-field appearance="fill" class="inputs_taza">
+      <mat-label>Tazas Disponibles</mat-label>
+      <input matInput disabled [value]="listCups.cantidad_disponible" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="inputs_taza">
       <mat-label>Tipo de taza</mat-label>
       <input matInput disabled [value]="listCups.tipo_taza" />
     </mat-form-field>
@@ -36,6 +40,8 @@
         matInput
         formControlName="cantidad_comprar"
         type="number"
+        min="0"
+        max="{{ listCups.cantidad_disponible }}"
       /> </mat-form-field
     ><br />
     <button type="submit" mat-raised-button class="inputs_login" color="accent">
